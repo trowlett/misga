@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Schedule.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>MISGA Sign Up</title>
+        <!--
+            <link href="styles/Site.css" rel="Stylesheet" type="text/css" media="screen" />
+        -->
+<link href="Styles/style2.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="Styles/schedule.css" rel="Stylesheet" type="text/css" media="screen" />
+<link href="styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link rel="shortcut icon" href="http://misga-signup.org/favicon.ico" />
+<asp:ContentPlaceHolder id="HeadContent" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+        <h1>
+            <%: ClubName %>
+            <br />Schedule
+        </h1>
+
+	</div>
+	<!-- End Masthead -->
+        <div id="version">
+        <p style="font-size: xx-small;">Version: 2016.02.15</p>
+    </div>
+	<!-- Begin Navigation -->
+
+<!--	<div id="navigation"> -->
+    <div id="menu">
+ 		    <asp:Menu ID="Menu1" runat="server" CssClass="navmenu" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/schedule.aspx" Text="Schedule" Value="Schedule"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="http://misga.org" Text="MISGA" Value="MISGA" Target="_blank"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
+
+
+<!--	</div>  -->
+	<!-- End Navigation -->
+	<div id="page_content">
+	<asp:ContentPlaceHolder id="MainContent" runat="server">
+	</asp:ContentPlaceHolder>
+	</div>  <!-- page_content -->
+		<div id="footer">
+            <br />
+    <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home | " Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/schedule.aspx" Text="Schedule | " Value="Schedule"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="http://misga.org" Text="MISGA" Value="[MISGA]" Target="_blank"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <br />
+		</div>
+	<!-- End Footer -->
+	</div>  <!-- Container -->
+	<div id="copyright">
+	<p style="height: 31px">Version: 16.02.15 - Last modified 
+        <script type="text/javascript">
+//            document.write(document.lastModified);
+        </script>
+
+               February 15, 2016
+
+					<br />
+		&copy Copyright 2011 thruough 2016 by Thomas M. Rowlett, All Rights Reserved</p>
+		</div>
+	</form>
+</body>
+</html>

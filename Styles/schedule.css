@@ -1,0 +1,172 @@
+﻿body {
+}
+.sched 
+{
+	}
+.sched h3, h4, p {
+	margin: 5px 5px 2px 5px;
+	padding: 0px 0px 0px 0px;
+	}
+.sched table 
+{
+		border: 1px black solid;
+		border-collapse: collapse;
+		margin: 5px 5px 5px 5px;
+		margin-left: auto;
+        margin-right: auto;
+		}
+.sched th {
+		border: 1px black solid;
+		padding: 1px 3px 1px 3px;
+		font-size: .8em;
+		}
+.sched td {
+		border: 1px black solid;
+		padding: 3px 3px 3px 3px;
+		font-size: .9em;
+		}
+.sched a:hover {
+	background-color: #000099;
+	color: #FFFF00;
+	}
+
+	
+.home {
+		background-color: #FFFFCC; 
+/*		background-color: #CCFFFF; */
+		color: black;
+		}
+.normal {
+		background-color: white;
+		color: navy;
+		}
+.away {
+		background-color: #CCFFFF;
+/*		background-color: #FCE1FD;
+		background-color: #FFEDDF; */
+		color: black;
+		}
+.misga {
+		background-color: white;
+		color: navy;
+		}
+.club {
+    background-color: #FFE8EB;
+    color: black;
+}
+.selectcol 
+{
+	width: 4em;
+	text-align: center;
+}
+.datecol {
+		width: 80px;
+		text-align: left;
+		}
+.hacol	{
+		width: 3em;
+		text-align: center;
+		}		
+.titlecol	{
+		width: 21.5em;
+		text-align: left;
+		}
+.clubcol
+{
+    width: 21.5em;
+    text-align: left;
+}
+.costcol {
+		width: 2.5em;
+		text-align: center;
+		}
+.timecol {
+		width: 3.5em;
+		text-align: center;
+		}
+.para_indent {
+		margin-left: 1em;
+		}
+.playerlimit 
+{
+	width: 3.4em;
+	text-align: center;
+}
+.deadlinecol 
+{
+    width: 60px;
+    text-align: center;
+}
+.postdatecol 
+{
+    width: 50px;
+    text-align: center;
+}
+.futurecol 
+{
+	text-align: center;
+	width: 50px;
+}
+#scheduledate
+{
+    float: right;
+    text-align: right;
+    width: 29%;
+}
+#scheduleShowAll {
+    float: left;
+    width: 70%;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+#mylist {
+    clear: both;
+    float: right;
+    text-align: right;
+}
+#pathinfo {
+    font-size: x-small;
+}
+.navmenu {
+	width: 800px;	
+/*	margin-right: auto;	*/
+/*	margin-left: auto;	*/
+	margin-left: 10px;
+/*	clear: both;	  */
+    float: left;
+	overflow: hidden;
+}
+/* Navigation Styles */
+.navmenu ul {
+	list-style-type: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+.navmenu li {
+	float: left;
+}
+.navmenu a {
+	text-decoration: none;
+	color: #b22222;
+	display: block;
+	margin: 0 1px;
+	padding: 5px;
+	border: 1px solid #708090;
+/*	background-color: #eee8aa; */
+	background-color: #FFFFCC;
+}
+.navmenu a:hover {
+	text-decoration: none;
+	color: #800000;
+	background-color: #d0dffa;
+}
+#scheduleEnd {
+    text-align: center;
+/*     display: none; */
+}
+
+		

@@ -1,0 +1,272 @@
+﻿@import url("layout.css");
+body {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 1em;
+	background-attachment: scroll;
+/*	background-color: #90b7f1; */
+/*	background-color: #6e6c5f; */
+/*	background-color: #336699; */
+/*	background-color: #C0C0C0; */
+/*	background-color: black; */
+	background-color: #333333;
+/*	background-image: url("../images/background.gif"); 
+	background-position: top left;
+	background-repeat: repeat-x; */
+}
+.para_indent {
+		margin-left: 1em;
+		}
+.addr_indent {
+	margin-left: 2em;
+}
+.center {
+	text-align: center;
+}
+#container {
+	width: 960px;
+/*	margin-top: 57px;  */
+	margin-top: 15px;
+	border-bottom: 2px solid #358;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border: thick gray solid;
+}
+#masthead {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #336699;
+}
+#masthead img {
+	width: 960px;
+}
+#print-hdr {
+	display: none;
+}
+#tools {
+	float: right;
+}
+#navigation {
+	width: 875px;	
+/*	margin-right: auto;	*/
+/*	margin-left: auto;	*/
+	margin-left: 10px;
+/*	clear: both;	*/
+	overflow: hidden;
+}
+#page_content {
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	clear: both;
+	padding-top: 0px;
+	margin-top: 5px;
+}
+#page_content li {
+	margin-top: 5pt;
+	margin-bottom: 5pt;
+}
+#content {
+	position: relative;
+	float: left;
+	width: 396px;
+	padding-top: 7px;
+	text-align: left;
+}
+#sidebar {
+	float: right;
+	width: 484px;
+	padding-top: 7px;	
+	padding-bottom: 10px;
+	text-align: left;
+}
+#version {
+    float: right;
+    text-align: right;
+    color: blue;
+    width: 100px;
+    margin-right: 10px;
+}
+#footer {
+	clear: both;
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 5px;
+	text-align: left;
+}
+/* Masthead Styles */
+#masthead h1 {
+	font-weight: bold;
+	color: white;
+	text-transform: capitalize;
+	text-align: center;
+}
+#masthead h3 {
+	bottom: 0;
+	font-weight: normal;
+	color: #b22222;
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 25px;
+}
+/* Navigation Styles */
+#navigation ul {
+	list-style-type: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+	float: left;
+}
+#navigation a {
+	text-decoration: none;
+	color: #b22222;
+	display: block;
+	margin: 0 1px;
+	padding: 5px;
+	border: 1px solid #708090;
+/*	background-color: #eee8aa; */
+	background-color: #FFFFCC;
+}
+#navigation a:hover {
+	text-decoration: none;
+	color: #800000;
+	background-color: #d0dffa;
+}
+/* Content Styles */
+#content h1,h2,h3,h4,h5,h6 {
+	color: #b22222;
+}
+#content img {
+/*	padding: 5px;
+	border: 1px solid #358; */
+}
+/* Sidebar Styles */
+#sidebar p {
+	color: #222;
+}
+#sidebar img {
+	float: right;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+/* Special Event Styles */
+#special_event ul {
+	list-style-type: square;
+	list-style-position: inside;
+	margin-left: 1em;
+	padding-left: 1em;
+	margin-right: 1.5em;
+}
+#special_event li {
+	margin-top: 5pt;
+	margin-bottom: 5pt;
+}
+#schedule {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+#schedule table {
+	text-align: center;
+	font-size: 1em;
+	border-collapse: collapse;
+	border: 1px #999999 solid;
+}
+#schedule td, th {
+	border: 1px #999999 solid;	
+}
+/* Footer Styles */
+#footer {
+    margin-left: 10px;
+}
+#footer p {
+	font-size: 0.85em;
+	color: #808080;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#footer a {
+	color: #47b;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #237;
+	text-decoration: none;
+}
+#copyright {
+	text-align: center;
+	font-size: x-small;
+    color: #808080;	
+    color: antiquewhite;
+    margin: 1px 1px 5px 1px;
+}
+/* Link Styles */
+a {
+	color: #191970;
+	text-decoration: underline;
+}
+a:hover {
+	color: #800000;
+
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}
+/* dl styles */
+dl {
+	
+}
+dt {
+	font-weight: bold;
+	margin-top: 5pt;
+}
+dd {
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+.alert  {
+	margin: 1em;
+	padding: 1em 1em 1.4em 1em;
+	border: medium #CCCCFF dashed;
+	background-color: #CCCCFF;
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+	color: #b22222;
+}
+.notice {
+	border-style: ridge;
+	border-color: yellow;
+	border-width: 10px;
+	padding: 0px 20px 5px 20px;
+	background-color: #CCCCFF;
+}	
+.notice p {
+	font-weight: bold;
+}
+#misga_news {
+	clear: both;
+	border-top: 2px silver solid;
+}
+#state_info {
+	border-top: 2px silver solid;
+}
+#state_info img
+{
+border: none;
+	padding: 0px 10px 5px 10px;
+	margin-right: auto;
+	margin-right: auto;
+	float: left;
+}
+

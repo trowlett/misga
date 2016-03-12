@@ -1,0 +1,77 @@
+﻿body {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 12pt;
+	color: black;
+	background-color: white;
+}	
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 12pt;
+	color: black;
+	background-color: white;
+}	
+#container {
+	width: 960px;
+/*	margin-top: 57px;  
+	margin-top: 15px;
+	border-bottom: 2px solid #358; */
+/*	background-color: #fff;
+/*	margin-left: auto;
+	margin-right: auto;	*/
+	border: none;	
+}
+#container img {
+	display: none;
+}	
+#masthead, #navigation, #footer, #copyright, #tools, #version, #pathinfo, #preface {
+	display: none;
+}
+#page_content {
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	clear: both;
+	padding-top: 7px;
+}
+#content {
+	position: relative;
+	float: left;
+	width: 396px;
+	padding-top: 7px;
+	text-align: left;
+}
+#sidebar {
+	float: right;
+	width: 484px;
+	padding-top: 7px;	
+	padding-bottom: 10px;
+	text-align: left;
+}
+#print_hdr {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24pt;
+	color: black;
+	background-color: white;
+}
+#home_schedule table {
+	font-size: 12pt;
+}
+#away_schedule table {
+	font-size: 12pt;
+}
+a:after {
+	display: none;
+}
+#menu {
+    display: none;
+}
+#scheduleShowAll {
+    display: normal;
+}
+.selectcol {
+    display: none;
+}
+.noPrint {
+    display: none;
+}
+

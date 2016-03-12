@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="misga_site.master.cs" Inherits="misga_site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+<!--    <link href="http://mrmisga.org/styles/style2.css" rel="stylesheet" type="text/css" media="screen"/> -->
+    <link href="http://mrmisga.org/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h2>MISGA Sign Up</h2>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="footer">
+            <p>&copy; Copyright 2014 - 2015 by Thomas M. Rowlett</p>
+        </div>
+    </form>
+</body>
+</html>
