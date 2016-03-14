@@ -179,7 +179,7 @@ public class MrSignup
                     }
                 }
                 else
-                {                               // no entry for this player and event
+                {                               // no entry in Playerslist DB for this player and event
                     PlayersList ple = new PlayersList()
                     {                                   // create new entry in players list database
                         ClubID = club,
@@ -192,10 +192,21 @@ public class MrSignup
                         SpecialRule = sr,
                         GuestID = guestID
                     };
+                    string did = IsSignUpForAnotherEvent(ple);
                     if (Action != txtCancel)
                     {                                       // cannot do a cancel on new entry
-                        db.PlayersList.InsertOnSubmit(ple);
-                        result = "Sign-up was successful.";
+                        if (did == "")
+                        {
+                            db.PlayersList.InsertOnSubmit(ple);
+                            result = "Sign-up was successful.";
+                        }
+                        else
+                        {
+                            string yy = did.Substring(3, 2);
+                            string mm = did.Substring(5, 2);
+                            string dd = did.Substring(7, 2);
+                            result = string.Format("Sign-up unsuccessful. You are signed up<br />for another Event on Date {1}/{2}/{3}",did,mm,dd,yy);
+                        }
                     }
                     else
                     {
@@ -216,6 +227,38 @@ public class MrSignup
         }
         return result;
 	}
+    public static string IsSignUpForAnotherEvent(PlayersList pl)
+    {
+        string signedUpForAnother = "";
+        string id = pl.EventID;
+        int player = pl.PlayerID;
+        string club = pl.ClubID;
+        string host = id.Substring(11, 3);          // Host Club ID is last three characters of Event ID/
+        string eDate = id.Substring(3, 6);
+        int hr = (Convert.ToInt32(id.Substring(9, 2)) < 12) ? 0 : 1;       // get first digit of hour only
+        string skey = id.Substring(0, 9);
+        string MRMISGADBConn = ConfigurationManager.ConnectionStrings["MRMISGADBConnect"].ToString();
+        MRMISGADB db = new MRMISGADB(MRMISGADBConn);
+
+        var dups = from p in db.PlayersList
+                   where ((p.ClubID == club) && (p.EventID.Substring(0, 9) == skey) && (p.PlayerID == player) && (p.Marked == 0))
+                   select new { p.ClubID, p.PlayerID, p.EventID };
+        if (dups != null)
+        {
+//            bool dup = false;
+            signedUpForAnother = "";
+            foreach (var item in dups)
+            {
+                int tmp = (Convert.ToInt32(item.EventID.Substring(9,2)) < 12) ? 0 : 1;
+                if (hr == tmp)
+                {
+                    signedUpForAnother = item.EventID;
+//                    dup = true;
+                }
+            }
+        }
+        return signedUpForAnother;
+    }
 
 	public static int ValidateGuestPlaying(string club, string EventID, int gID, int pID)
 	{

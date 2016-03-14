@@ -70,8 +70,7 @@
             find out how you might be able to sign up for it.</p>
             
 		<p style="font-style: italic; font-weight: bold; text-align: center;">
-			Event fees include: greens fee, cart, range balls, prizes, refreshments (usually 
-			coffee and doughnuts), and lunch.
+			MISGA fees include: greens fee, cart, range balls, prizes, refreshments (usually coffee and doughnuts), and lunch.
 	</p>
     </div>
 		<asp:Repeater runat="server" ID="ScheduleRepeater">

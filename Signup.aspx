@@ -41,8 +41,7 @@
 			</div>
 
         <table style="width:100%;"><tr>
-            <td style="text-align: left;border: none;"><asp:Label ID="lblAction" runat="server" 
-                    Visible="False">&nbsp;</asp:Label>
+            <td style="text-align: left;border: none;"><asp:Label ID="lblAction" runat="server">&nbsp;</asp:Label>
                     <asp:LinkButton ID="linkbuttonSR" runat="server" Visible="False" 
                     Enabled="False">
                     Click here for Help Computing Your Course Handicap</asp:LinkButton></td>
