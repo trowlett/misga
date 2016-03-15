@@ -13,14 +13,26 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="width: 840px;">
+        <div>
+        <table style="width: 100%;">
+    <tr>
+        <td style="width: 80%;">
         <h2>MISGA Sign Up</h2>
+        </td>
+        <td style="text-align: right; font-size: .8em;">
+            Version: &nbsp;
+            2016.03.14
+        </td>
+    </tr>
+</table>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
         <div class="footer">
-            <p>&copy; Copyright 2014 - 2015 by Thomas M. Rowlett</p>
+            <p style="text-align: center">&copy; Copyright 2014 - 2016 by Thomas M. Rowlett</p>
+        </div>
         </div>
     </form>
 </body>
