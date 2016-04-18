@@ -22,6 +22,9 @@
 	</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    	<div id="print-hdr">
+            <h2 style="text-align: center;"><%: ClubName %></h2>    	</div>
+
     <div id="signup">
 	<div class="signuphdr">
     <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
@@ -33,7 +36,7 @@
 	 </div> 
 			<div id="mixerinfo">
 			<asp:Literal ID="litInfo" runat="server" Mode="PassThrough"></asp:Literal>
-                <p class="center">
+                <p style="text-align: center;">
                 <asp:Label ID="MISGA_Std_Tee" runat="server" Text="Club's Standard MISGA Tee:  yds., slope and rating."></asp:Label>
                     &nbsp;
                     <asp:Label ID="Select_STD" runat="server" Text="Select <b>STD</b> in Tee Choices below." Visible="False"></asp:Label>

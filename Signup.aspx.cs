@@ -20,6 +20,7 @@ using System.Data.SqlClient;
 		private const string keyPlayers = "Players";
         private const string keySignups = "Signups";
 		private string[] contact = new string[3];
+    public string ClubName { get; set; }
 		public string webMaster;
 		public string webMasterEmail;
 		public string website;
@@ -111,10 +112,12 @@ using System.Data.SqlClient;
             clubSettings = new Settings();
             clubSettings.ClubID = clubID;
             clubSettings.ClubInfo = ClubManager.GetSetting(clubID);
-//            clubSettings = (Settings)Session["Settings"];
-//			litOrg1.Text = ConfigurationManager.AppSettings["Org"];
-//			litOrg2.Text = ConfigurationManager.AppSettings["Org"];
-            litOrg1.Text = clubSettings.ClubInfo.OrgName;
+        //            clubSettings = (Settings)Session["Settings"];
+        //			litOrg1.Text = ConfigurationManager.AppSettings["Org"];
+        //			litOrg2.Text = ConfigurationManager.AppSettings["Org"];
+        ClubName = clubSettings.ClubInfo.ClubName;
+        Page.Title = clubSettings.ClubInfo.ClubName + " SignUp Page";
+        litOrg1.Text = clubSettings.ClubInfo.OrgName;
             litOrg2.Text = clubSettings.ClubInfo.OrgName;
             offset = ConfigurationManager.AppSettings["SignupOffset"];
             IsAccessControlOn = false;
@@ -172,13 +175,13 @@ using System.Data.SqlClient;
             {
                 if (mixer.Type.Trim() == "Home")
                 {
-                    Page.Title = string.Format("{0} {1} Sign-up", mixer.Date.ToString("MMM d"), ConfigurationManager.AppSettings["Org"]);
+                    Page.Title = string.Format("{0} {1} Sign-up", mixer.Date.ToString("MMM d"), ClubName);
                 }
                 else
                 {
                     Page.Title = string.Format("{0} {1} Sign-up",mixer.Date.ToString("MMM d"), mixer.Title);
                 }
-                deadline = mixer.Deadline;
+            deadline = mixer.Deadline;
                 playerLimit = mixer.PlayerLimit;
                 hostClubPhone = GetHostPhone(mixer.HostID);
                 MISGA_Std_Tee.Text = GetHostMISGAStdTee(mixer.HostID);
