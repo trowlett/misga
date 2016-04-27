@@ -66,7 +66,7 @@ public partial class _Default : System.Web.UI.Page
             clubSettings.ClubID = clubID;
             string x = clubSettings.ClubID;
             clubSettings.ClubInfo = ClubManager.GetSetting(clubID);
-            string pageToLoad = "schedule.aspx?CLUB=" + clubID;
+            string pageToLoad = "schedule.aspx?CLUB=" + clubID+"&OFFSET=0";
             Session["Settings"] = clubSettings;
             Response.Redirect(pageToLoad);
         }

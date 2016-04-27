@@ -104,8 +104,9 @@ public partial class Signup_Default : System.Web.UI.Page
         ClubName = clubSettings.ClubInfo.ClubName;
         litOrg3.Text = clubSettings.ClubInfo.ClubName;
         Page.Title = clubSettings.ClubInfo.ClubName + " Schedule";
-        string offset = ConfigurationManager.AppSettings["SignupOffset"];
-        if (offset == null) offset = "0";
+//        string offset = ConfigurationManager.AppSettings["SignupOffset"];
+        string offset = Request.QueryString["OFFSET"];
+        if (offset == null) offset = "0"; else offset = "7";
 //        offset = "180";                       FOR TESTING PURPOSES
         ETZ = new MrTimeZone();
         sysToday = ETZ.eastTimeNow();
