@@ -83,7 +83,7 @@ public class SignupList
 			else
 			{
 				//				MRParams param = db.MRParams.FirstOrDefault(p => p.Key == keyPlayers);
-				Guest guest = db.Guest.FirstOrDefault(g => g.GuestID == item.GuestID);
+				Guest guest = db.Guest.FirstOrDefault(g => g.ClubID == item.ClubID && g.GuestID == item.GuestID);
 				entry.SGuestName = guest.GuestName;
 				entry.SgHcp = guest.gHcp;
 				entry.SgSex = "Male";

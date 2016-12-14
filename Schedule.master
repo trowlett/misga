@@ -32,7 +32,7 @@
 	</div>
 	<!-- End Masthead -->
         <div id="version">
-        <p style="font-size: xx-small;">Version: 2016.03.14</p>
+        <p style="font-size: xx-small;">Version: 2016.12.14</p>
     </div>
 	<!-- Begin Navigation -->
 
@@ -68,7 +68,7 @@
 	<!-- End Footer -->
 	</div>  <!-- Container -->
 	<div id="copyright">
-	<p style="height: 31px">Version: 16.03.14  
+	<p style="height: 31px">Version: 16.05.20  
         Last Modified
 					<br />
 		&copy Copyright 2011 thruough 2016 by Thomas M. Rowlett, All Rights Reserved</p>

@@ -16,6 +16,12 @@
 			height: 25px;
             border: none;
 		}
+        .suname
+        {
+            width: 250px;
+	        Text-Align: left;
+	        padding-left: 3px;
+        }
 	</style>
 	<script type="text/C#">
 	int count = 5;
@@ -275,8 +281,8 @@
 		<table style="margin-left: auto; margin-right: auto">
 			<tr>
 				<th class="seqno"></th>
-				<th class="name">Name</th>
-				<th class="srule"></th>
+				<th class="suname">Name</th>
+				<th class="srule">Tee</th>
 				<th class="carpool">Ride</th>
 				<th class="timestamp">Date</th> 
 			   </tr>
@@ -285,7 +291,7 @@
 			   <ItemTemplate>
 			   <tr>
 					<td class="seqno"><%# ((SignupEntry)Container.DataItem).SeqNo %></td>
-					<td class="name"><%# ((SignupEntry)Container.DataItem).Splayer %></td>
+					<td class="suname"><%# ((SignupEntry)Container.DataItem).Splayer %></td>
 					<td class="srule"><%# ((SignupEntry)Container.DataItem).SspecialRule %></td>
 					<td class="carpool"><%# ((SignupEntry)Container.DataItem).Scarpool %></td>
 					<td class="timestampitem"><%# ((SignupEntry)Container.DataItem).STDate.ToString("MM/d h:mm t") %></td>
