@@ -252,7 +252,7 @@ public class MrLoadMixerInfo
     }
     private static string SetCost(string cost)
     {
-        return cost.Substring(0, 3) + " ";
+        return cost.Trim() + " ";
     }
     private static string[] fillAwayDescription(Clubs item, Events mixer)
     {

@@ -22,7 +22,8 @@ public class SignupDates
     {
         MrTimeZone ETZ = new MrTimeZone();
         sysToday = ETZ.eastTimeNow();
-        string MRMISGADBConn = ConfigurationManager.ConnectionStrings["MRMISGADBConnect"].ToString();
+        LastDate = new DateTime(sysToday.Year, 12, 31, 23, 59, 59, System.Globalization.CultureInfo.InvariantCulture.Calendar);
+/*        string MRMISGADBConn = ConfigurationManager.ConnectionStrings["MRMISGADBConnect"].ToString();
         MRMISGADB db = new MRMISGADB(MRMISGADBConn);
         MRParams entry = db.MRParams.FirstOrDefault(p => (p.ClubID== ClubID) && (p.Key == keyLastDate));
         if (entry != null)
@@ -43,8 +44,9 @@ public class SignupDates
             db.SubmitChanges();
         }
         MRParams edts = db.MRParams.FirstOrDefault(p => (p.ClubID == ClubID) && (p.Key == keyDaysToShow));
+        */
         daysToShow = defaultDisplayDays;
-        if (edts != null)
+/*        if (edts != null)
         {
             daysToShow = Convert.ToInt32((string)edts.Value);
         }
@@ -59,6 +61,7 @@ public class SignupDates
             db.MRParams.InsertOnSubmit(newParm);
             db.SubmitChanges();
         }
+        */
         displayDate = sysToday.AddDays(daysToShow);
         displayDate = ETZ.eastTimeNow().AddDays(daysToShow);
         if (LastDate < displayDate)
